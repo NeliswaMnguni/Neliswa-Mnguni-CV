@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional CV</title>
+    <style>
+        /* Global Reset and Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        /* CV Container Layout */
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #1e293b;
+            color: #ffffff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            font-weight: 300;
+        }
+
+        /* Contact Details Banner */
+        .contact-info {
+            background-color: #0f172a;
+            color: #cbd5e1;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .contact-info a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Section */
+        .main-content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-size: 1.3rem;
+            color: #1e293b;
+            text-transform: uppercase;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Summary / Profile */
+        .profile-text {
+            color: #475569;
+            text-align: justify;
+        }
+
+        /* Experience and Education Items */
+        .cv-item {
+            margin-bottom: 20px;
+        }
+
+        .cv-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+
+        .job-title, .degree {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .company, .institution {
+            font-style: italic;
+            color: #64748b;
+        }
+
+        .date-range {
+            font-size: 0.9rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .cv-item ul {
+            margin-top: 8px;
+            padding-left: 20px;
+            color: #475569;
+        }
+
+        .cv-item li {
+            margin-bottom: 5px;
+        }
+
+        /* Skills Grid Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background-color: #f1f5f9;
+            color: #334155;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Responsive Optimization */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            header {
+                padding: 30px 20px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+            }
+            .main-content {
+                padding: 25px;
+            }
+            .cv-item-header {
+                flex-direction: column;
+            }
+            .date-range {
+                margin-top: 3px;
+            }
+        }
+
+        /* Print Settings Optimization */
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            header {
+                background-color: #fff;
+                color: #000;
+                padding: 20px 0;
+                border-bottom: 2px solid #000;
+            }
+            header h1 { color: #000; }
+            header p { color: #444; }
+            .contact-info {
+                background-color: #fff;
+                color: #000;
+                justify-content: space-between;
+                border-bottom: 1px solid #ddd;
+                padding: 10px 0;
+            }
+            .contact-info a { color: #000; }
+            .section-title {
+                border-bottom-color: #000;
+            }
+            .skill-tag {
+                border: 1px solid #ccc;
+                background-color: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <!-- Main Contact Heading Banner -->
+        <header>
+            <h1>Neliswa Mnguni</h1>
+            <p>System Development Student</p>
+        </header>
+
+        <!-- Contact Links Bar -->
+        <div class="contact-info">
+            <span>📍 Johannesburg, Tembisa</span>
+            <span>📞 +27 60 929 4276</span>
+            <span>✉️ <a href="mailto:ntontolozi137@gmail.com">ntontolozi137@gmail.com</a></span>
+            <span>🔗 <a href="https://linkedin.com" target="_blank">linkedin.com</a></span>
+        </div>
+
+        <!-- Main Profile Body Content -->
+        <div class="main-content">
+            
+            <!-- Professional Summary Section -->
+            <section>
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="profile-text">
+                    Customer Service & Relations Travel Planning & Itinerary Management
+Flight & Hotel Booking Travel Policy Compliance Communication &
+Negotiation Problem-Solving & Troubleshooting Time Management
+Attention to Detail GDS (Global Distribution Systems) proficience (e.g.,
+Amadeus, Sabre) Travel Documentation & Visa Processing
+                </p>
+            </section>
+
+            <!-- Work Experience Section -->
+            <section>
+                <h2 class="section-title">Work Experience</h2>
+                
+                <!-- Job Entry 1 -->
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <div>
+                            <span class="job-title">Travel Consultant</span> – 
+                            <span class="company">Rennies BCD Travel</span>
+                        </div>
+                        <span class="date-range">2020 – 2024</span>
+                    </div>
+                    <ul>
+                        <li>Advising clients on travel options and destinations</li>
+                        <li>Booking flights, accommodations, and activities</li>
+                        <li>Creating customized travel itineraries</li>
+						<li>Handling travel documentation (visa, insurance)</li>
+						<li>Resolving travel issues or disruptions</li>
+						<li>Providing destination information and recommendations</li>
+						<li>Managing bookings and payments</li>
+						<li>Meeting sales targets or promoting travel package</li>
+                    </ul>
+                </div>
+
+                <!-- Job Entry 2 -->
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <div>
+                            <span class="job-title">Admin Clerk</span> – 
+                            <span class="company">Spark Schools</span>
+                        </div>
+                        <span class="date-range">2019 – 2020</span>
+                    </div>
+                    <ul>
+                        <li>Administration duties.</li>
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Core Skills Section -->
+            <section>
+                <h2 class="section-title">CORE SKILLS</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">Customer Service</div>
+                    <div class="skill-tag"> Problem-Solving </div>
+                    <div class="skill-tag">Travel Documentation</div>
+                    <div class="skill-tag">Itinerary Management</div>
+                    <div class="skill-tag">Time Management</div>
+                    <div class="skill-tag">Attention to Detail GDS</div>
+                </div>
+            </section>
+
+            <!-- Education History Section -->
+            <section>
+                <h2 class="section-title">Education</h2>
+                
+                <!-- Degree Entry -->
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <div>
+                            <span class="degree">Internal Audit</span> – 
+                            <span class="institution">University of South Africa</span>
+                        </div>
+                        <span class="date-range">2026 – Current</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+</body>
+</html>
